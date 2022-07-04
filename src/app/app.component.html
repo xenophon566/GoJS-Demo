@@ -1,0 +1,23 @@
+<nb-layout>
+    <nb-layout-column>
+        <demo-icr-flow></demo-icr-flow>
+        <nb-card>
+            <nb-card-header>Database</nb-card-header>
+            <nb-card-body>
+                <div>
+                    <label for="key" class="form-label">Nodes</label>
+                    <div class="input-group mb-3">
+                        <textarea class="form-control" rows="12" [(ngModel)]="nodes"></textarea>
+                    </div>
+                    <label for="value" class="form-label">Connections</label>
+                    <div class="input-group mb-3">
+                        <textarea class="form-control" rows="6" [(ngModel)]="connections"></textarea>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <button nbButton outline status="primary" (click)="setMessages(nodes, connections)">Update</button>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </nb-layout-column>
+</nb-layout>

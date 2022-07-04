@@ -1,0 +1,42 @@
+<nb-card>
+    <nb-card-header>GoJS IVR 範例</nb-card-header>
+    <nb-card-body>
+        <div class="icr-flow">
+            <div class="body">
+                <div *ngIf="isResultExist">
+                    <div class="legend-area">
+                        <span>圖例：</span>
+                        <span class="legend" *ngFor="let node of nodePaletteArr">
+                            <span>
+                                {{ node.key === "start" ? "開始" : node.key === "end" ? "結束" : "一般" }} &nbsp;
+                            </span>
+                            <span class="node-color" [style]="{ 'background-color': node.value }"> </span>
+                        </span>
+                        <span class="legend" *ngFor="let module of moduleTypePaletteArr">
+                            <span> {{ moduleType[module.key] }} &nbsp; </span>
+                            <span class="node-color" [style]="{ 'background-color': module.value }"> </span>
+                        </span>
+                        <span class="legend" *ngFor="let connection of connectionPaletteArr">
+                            <span> {{ answerType[connection.key] }} &nbsp; </span>
+                            <span class="connection-color" [style]="{ 'background-color': connection.value }"> </span>
+                        </span>
+                    </div>
+                    <div class="draw-area">
+                        <div class="info">
+                            <span>題目 : {{ questionTitle }}</span>
+                            <span>通道 : {{ questionChannel }}</span>
+                            <span>事件 : {{ questionEvents === "default" ? "常態" : "活動" }}</span>
+                        </div>
+                        <div class="graph">
+                            <demo-gojs-ivr [model]="gojsIVRModel"></demo-gojs-ivr>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="!isResultExist">
+                    <div style="padding-top: 3.6rem"></div>
+                    <p>這個選項沒有資料</p>
+                </div>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>

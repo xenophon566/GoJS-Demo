@@ -1,0 +1,86 @@
+.icr-flow {
+    display: flex;
+    width: 100%;
+
+    .side-menu {
+        width: 20%;
+        padding: 1.2rem;
+
+        .side-menu-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 3rem;
+        }
+
+        nb-list {
+            line-height: 2rem;
+
+            nb-list-item {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .body {
+        width: 80%;
+        padding: 1.2rem;
+
+        .channel-menu {
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .events-menu {
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .draw-area {
+            .info {
+                display: flex;
+
+                span {
+                    display: inline-block;
+                    margin-right: 3.6rem;
+                }
+            }
+
+            .graph {
+                width: 100%;
+
+                .diagramDiv {
+                    height: 20rem !important;
+                }
+            }
+        }
+
+        .legend-area {
+            display: flex;
+
+            .legend {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+
+                .node-color {
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 0.7rem;
+                }
+
+                .connection-color {
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 0.2rem;
+                }
+            }
+        }
+    }
+
+    .flow-chart-area {
+    }
+
+    .mat-button-toggle {
+        border-right: 1px solid #00000030;
+    }
+}

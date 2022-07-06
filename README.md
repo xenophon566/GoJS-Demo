@@ -2,6 +2,9 @@
 
 -   Style frameworks (Bootstrap + Nebular)
 -   Database (firebase realtime)
--   [Demo](https://angular-ivy-7xagz4.stackblitz.io/)
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-7xagz4)
+# Start service before you checkout demo
+
+-   Demo - https://7xagz4-gojs.stackblitz.io/
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/7xagz4-gojs)
